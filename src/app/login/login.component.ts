@@ -30,13 +30,34 @@ export class LoginComponent implements OnInit {
     console.log(this.password);
     
   }
-  login(){
-    var account=this.account
-    var password=this.password
+  // login(){
+  //   var account=this.account
+  //   var password=this.password
+  //   let data=this.data
+  //   if(account in data){
+  //     if(password== data[account]['password']){
+  //       alert('the login succesful')
+  //     }
+  //     else{
+  //       alert('one of your account number or password incorrect')
+  //     }
+
+  //   }
+  //   else{
+  //     alert('the user doesnt exist')
+  //   }
+  // }
+  login(a:any,p:any){
+    var account=a.value
+    var password=p.value
     let data=this.data
     if(account in data){
       if(password== data[account]['password']){
         alert('the login succesful')
+        console.log("the password is : "+password);
+        console.log("the account number is : "+account);
+        
+        
       }
       else{
         alert('one of your account number or password incorrect')
