@@ -7,23 +7,15 @@
   </div>
 </nav>
 <div class="position-absolute top-50 start-50">
-    <div class="card w-50">
-        <div class="card-body">
-          <h5 class="card-title">LOGIN</h5>
-          <form action="">
-            <input #account type="text" placeholder="enter account number"><br><br>
-            <input #password  type="password" placeholder="enter your password">
-          </form><br>
-          <a (click)="login(account,password)" href="#" class="btn btn-primary">Button</a>
-        </div>
-      </div><br>
-      
-      <div class="card w-50">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a  href="#" class="btn btn-primary">Button</a>
-        </div>
-      </div>
-</div>
-
+  <div class="card w-100">
+    <div class="card-body">
+      <h5 class="card-title">LOGIN</h5>
+      <form>
+        <input [(ngModel)]="account" name="acno" type="text" placeholder="enter account number">
+        <br><br>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="enter your password">
+      </form>
+      <br>
+      <a (click)="login()" routerLink="dashbord" class="btn btn-primary">Button</a>
+    </div>
+  </div>

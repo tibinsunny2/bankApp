@@ -1,0 +1,18 @@
+<div class="position-absolute top-50 start-50">
+    <div class="card w-100">
+      <div class="card-body">
+        <h5 class="card-title"><U><U>REGISTER</U></U></h5>
+        <form>
+            <input [(ngModel)]="username" name="username" type="text" id="user_name" placeholder="enter the username">
+          <br><br>
+          <input [(ngModel)]="account" name="acno" type="text" id="account_no" placeholder="enter account number">
+          <br><br>
+          <input [(ngModel)]="password" name="password" type="password" id="password_j"  placeholder="enter your password">
+        </form>
+        <br>
+        <a (click)="register(account,password,username)" routerLink="login" class="btn btn-primary">register</a>
+        <br>
+        <P>if you are an existing user?? <a routerLink="login">LOGIN</a></P>
+       
+      </div>
+    </div>
